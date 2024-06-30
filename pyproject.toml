@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["Alexandr_Buranov"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9.13"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.1.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+exclude = '''
+(
+  /(
+      \.eggs         # Исключить несколько общих каталогов
+    | \.git          # в корне проекта
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | dist
+  )/
+)
+'''
