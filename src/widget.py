@@ -13,5 +13,4 @@ def mask_account_card(number: str) -> str:
 
 def get_data(data_string: str) -> str:
     """Функция принимает дату и меняет формат"""
-    data_slise = data_string[0:10].split('-')
-    return '.'.join(data_slise[::-1])
+    return '.'.join(data_string[0:10].split('-')[::-1])
