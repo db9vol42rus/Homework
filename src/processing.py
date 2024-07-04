@@ -7,6 +7,7 @@ state_list = [
 
 
 def filter_by_state(state_list: list[dict[str]], state_id="EXECUTED") -> list[dict[str]]:
+    """Функция принимает список типа: key, value и выводит отфильтрованный"""
 
     list_state = []
 
